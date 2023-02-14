@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <h1>localStorage Example</h1>
+    <h3 id="demo"></h3>
+
+    <h1>Session Storage</h1>
+    <h3 class="sess"></h3>
+    <h3 class="sess"></h3>
+    <h3 class="sess"></h3>
+
+    <h1>remove Item</h1>
+    <h3 id="remove"></h3>
+
+    <h1>clear Item</h1>
+    <h3 id="clear"></h3>
+
+    <script>
+        //sessionStorage is similar to localStorage
+        //the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+
+        // localStorage
+        localStorage.setItem('fname', 'pallab');
+        localStorage.setItem('lname', 'mondal');
+
+        let fn = localStorage.getItem("fname");
+        let ln = localStorage.getItem('lname');
+
+        document.getElementById('demo').innerHTML = fn + ' ' + ln;
+
+
+        // sessionStorage
+        sessionStorage.setItem('age', '26');
+        sessionStorage.setItem('subject', 'react');
+
+        let rl = sessionStorage.getItem('age');
+        let sub = sessionStorage.getItem('subject');
+
+        document.getElementsByClassName('sess')[0].innerHTML = rl + ' ' + sub;
+        document.getElementsByClassName('sess')[1].innerHTML = rl + ' ' + sub;
+        document.getElementsByClassName('sess')[2].innerHTML = rl + ' ' + sub;
+
+        // remove item
+        // localStorage.removeItem('fname');
+        // let fnr = localStorage.getItem("fname");
+        // let lnr = localStorage.getItem('lname');
+
+        // document.getElementById('remove').innerHTML = fnr + ' ' + lnr;
+
+
+        // clear Storage
+        // localStorage.clear();
+        // let fnc = localStorage.getItem("fname");
+        // let lnc = localStorage.getItem('lname');
+
+        // document.getElementById('clear').innerHTML = fnc + ' ' + lnc;
+
+
+    </script>
+</body>
+
+</html>

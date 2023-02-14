@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let n=prompt("enter the students number");
+
+        if(n>=80){
+            document.getElementById("demo").innerHTML="A";
+        }
+        else if(n<80 && n>=60){
+            document.getElementById("demo").innerHTML="B";
+        }
+        else if(n<60 && n>=45){
+            document.getElementById("demo").innerHTML="C";
+        }
+        else if(n<45 && n>=30){
+            document.getElementById("demo").innerHTML="D";
+        }
+        else{
+            document.getElementById("demo").innerHTML="FAIL";
+        }
+    </script>
+</body>
+</html>

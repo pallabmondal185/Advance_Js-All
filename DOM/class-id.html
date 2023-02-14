@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- DOM= Document Object Model -->
+<!-- with the HTML DOM, JavaScript can access or change all the elementsof an HTML Document  -->
+<!-- The DOM provides functions that allow you to add, remove, and modify parts of the document effectively -->
+
+<!-- The <html> element is called the document element. -->
+
+<body>
+    <p class="demo">element-1</p>
+    <div class="demo">element-2</div>
+    <p id="demo">element-3</p>
+    <div id="demo">element-4</div>
+
+<script>
+    document.getElementById("demo").innerHTML='hello';
+    document.getElementsByClassName('demo')[0].innerHTML='hii..';
+    document.write("write here...");
+</script>
+</body>
+</html>

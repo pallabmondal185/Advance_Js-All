@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="myfunc()">
+        <label for="name">Enter your name: </label>
+        <input type="text" class="name">
+        <input type="submit">
+    </form>
+    <div class="name"></div>
+
+    <script>
+        function myfunc(){
+            let name=document.getElementsByClassName('name');
+
+            let n=name[0].value;
+            name[1].innerHTML='your name is: '+n;
+            
+            alert('your name is: '+n);
+        }
+       
+       
+    </script>
+</body>
+</html>

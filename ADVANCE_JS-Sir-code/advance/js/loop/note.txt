@@ -1,0 +1,16 @@
+The JavaScript for loop iterates the elements for the fixed number of times..
+
+for (initialization; condition; increment)  
+{  
+    code to be executed  
+}  
+
+
+////while loop
+
+
+
+while (condition)  
+{  
+    code to be executed  
+}  

@@ -1,0 +1,12 @@
+switch(expression){  
+case value1:  
+ code to be executed;  
+ break;  
+case value2:  
+ code to be executed;  
+ break;  
+......  
+  
+default:   
+ code to be executed if above values are not matched;  
+}  

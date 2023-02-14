@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="car">select a car: </label><br>
+
+    <input type="radio" name="cars" onchange="myfunc('volvo')" >
+    <label for="volvo">volvo</label>
+
+    <input type="radio" name="cars" onchange="myfunc('taxi')" >
+    <label for="taxi">taxi</label>
+
+    <input type="radio" name="cars" onchange="myfunc('truck')" >
+    <label for="truck">truck</label>
+
+    <div id="demo1"></div>
+
+    <label for="name">enter your name: </label>
+    <input type="text" onchange="myname()" id="name">
+    <div id="demo2"></div>
+
+    <script>
+       const myfunc=function(car){
+            document.getElementById('demo1').innerHTML='you selected: '+car;
+        }
+
+        function myname(){
+            let n=document.getElementById('name').value;
+            document.getElementById('demo2').innerHTML='your name is: '+n;
+        }
+    </script>
+
+</body>
+</html>

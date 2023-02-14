@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="cars">select the car: </label>
+    <select name="cars" id="cars" onchange="myfunc()">
+        <option value="volvo" id="volvo">volvo</option>
+        <option value="taxi" id="taxi">taxi</option>
+        <option value="truck" id="truck">truck</option>
+    </select>
+
+    <p id="demo"></p>
+
+    <script>
+      const myfunc=()=>{
+        let car=document.getElementById('cars').value;
+        document.getElementById('demo').innerHTML='you selected:  '+car ;
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>fetch example</h1>
+    <p>fethcing is vere interisting</p>
+    <!-- <p id="demo"></p> -->
+    <h3>
+        <!-- The <pre> tag in HTML is used to define the BLOCK OF PREFORMATTED TEXT which preserves the text spaces, line breaks, tabs, and other formatting characters which are ignored by web browsers. -->
+        <pre id="demo"></pre>
+    </h3>
+
+    <script>
+        let url = 'https://api.github.com/users'
+        // fetch(url).then(x => x.text())
+        // .then(y => document.getElementById('demo').innerHTML=y );
+
+        function getData() {
+            console.log('starting fetching data');
+            fetch(url).then((response) => {
+                console.log('inside first then')
+                return response.json();
+            }).then((data) => {
+                console.log('inside second then');
+                console.log(data);
+
+                //The JSON.stringify() method converts a JavaScript value to a JSON string.
+                document.getElementById('demo').innerHTML = JSON.stringify(data, null, 2);
+
+                //JSON.stringify(value, replacer, space)
+
+                //value: The value to convert to a JSON string.
+
+                //replacer: If replacer is null or not provided, all properties of the object are included in the resulting JSON string.
+
+                //space: A string or number that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
+
+            })
+        }
+
+        getData();
+    </script>
+</body>
+
+</html>
